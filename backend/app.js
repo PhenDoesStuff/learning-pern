@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express();
 
+// middleware to make sure we can get past CORS
 app.use((req, res, next) => {
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	res.setHeader(
